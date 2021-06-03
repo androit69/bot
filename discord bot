@@ -1,0 +1,31 @@
+import discord
+from discord.ext import commands
+
+client = commands.Bot(command_prefix="b")
+
+@client.event
+async def on_ready():
+    print("bot2 is ready")
+
+@client.event
+async def on_message(msg):
+    for word in filtered_words:
+        if word in msg.content:
+            await msg.delete()
+    for word in pog:
+        if word in msg.content:
+            await msg.channel.send("pp")
+            break
+
+    
+pog = ["a"]
+
+
+
+
+
+filtered_words = ["fuck","fk","penis","tf","mtfers","mtf","mtfer","have","tits","dick","bitch","Fuck","bitc","fc","fucer","fucker","?"]
+
+
+
+client.run("ODQ5NjQ1NTE0MDE4NjUyMTYw.YLeMDA.DQp7ER14mByAj9hY3t-45x2xZy4")
